@@ -12,18 +12,32 @@
 </head>
 <body>
     <header class="col-12 col-lg-12">
+        <h1>Weather Dashboard</h1>
     </header>
-    <div class="col-12 col-lg-4 searchArea">
+    <div class="col-12 col-lg-4 searchArea wireframe">
+        <form>
+            <div>
+              <label for="exampleInputEmail1" class="form-label">Search for City:</label>
+              <input type="city" class="form-control" id="inputCity" placeholder="Austin">
+            </div>
+            <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
+        </form>
+    </div>
+    <div class="col-12 col-lg-8 currentData wireframe">
+            <h1>Current City [Current Date]</h1>
+    </div>
+    <div class="col-12 col-lg-4 history wireframe">
+        <button>Search history options</button>
 
     </div>
-    <div class="col-12 col-lg-8 currentData">
-
-    </div>
-    <div class="col-12 col-lg-4 history">
-
-    </div>
-    <div class="col-12 col-lg-8 5dayForecast">
-
+    <div class="col-12 col-lg-8 5dayForecast wireframe">
+        <h1>5-day Forecast</h1>
+        
+            <div class="col-12 col-lg-2 block"></div>
+            <div class="col-12 col-lg-2 block"></div>
+            <div class="col-12 col-lg-2 block"></div>
+            <div class="col-12 col-lg-2 block"></div>
+            <div class="col-12 col-lg-2 block"></div>
     </div>
 
 
