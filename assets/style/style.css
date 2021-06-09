@@ -1,11 +1,11 @@
 header{
-    height: 100px;
+    height: 150px;
     border: 2px solid red;
     text-align: center;
 }
 
 .wireframe, .blocks, .block{
-    height: 250px;
+    height: 300px;
     border: 2px solid red;
 }
 .block{
