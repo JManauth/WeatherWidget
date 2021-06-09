@@ -5,7 +5,7 @@ header{
 }
 
 .wireframe, .blocks, .block{
-    height: 300px;
+    height: fit-content;
     border: 2px solid red;
 }
 .block{
@@ -16,4 +16,7 @@ header{
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.currentData{
+    height: fit-content;
 }
