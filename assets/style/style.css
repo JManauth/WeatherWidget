@@ -1,17 +1,24 @@
 header{
     height: 150px;
-    border: 2px solid red;
+    
     text-align: center;
+    background-color: darkblue;
+    color: white;
 }
 
 .wireframe, .blocks, .block{
     height: fit-content;
-    border: 2px solid red;
 }
 .block{
     margin-left: 3%;
+    background-color: darkblue;
+    color: whitesmoke;
+    text-align: center;
+    width: fit-content;
 }
-
+.form-label{
+    font-size: 40px;
+}
 #searchBtn, #inputCity{
     width: 100%;
     margin-top: 10px;
@@ -19,4 +26,23 @@ header{
 }
 .currentData{
     height: fit-content;
+    border-bottom: 2px solid black;
+    justify-content: center;
+}
+.btn {
+    width: 100%;
+}
+
+.fiveDayForecast{
+    margin-bottom: 5%;
+}
+
+.searchArea{
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#uv{
+    width: fit-content;
+    border-radius: 5px;
 }
