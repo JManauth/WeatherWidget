@@ -148,6 +148,18 @@ $(searchBtn).on('click', function(event){
 
 //save to local storage
 
+//var history = [];
+var pullhistory = JSON.parse(localStorage.getItem('weatherHistory'));
+console.log(pullhistory);
 $(searchBtn).on('click', function(){
-  console.log('hello');
-})
+
+  if( pullhistory === null){
+    var history = [];
+    history[0] = $('#inputCity').val().trim();
+    localStorage.setItem('weatherHistory', JSON.stringify(history));
+  } else {
+    console.log('foo');
+  }
+});
+
+//var pullhistory = JSON.parse(localStorage.getItem('weatherHistory'));
