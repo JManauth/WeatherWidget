@@ -4,7 +4,7 @@ var wind = document.getElementById('wind');
 var humidity = document.getElementById('humidity');
 var uv = document.getElementById('uv');
 var icon = document.getElementById('currentDayIcon');
-var location = document.getElementById('city');
+var city = document.getElementById('city');
 //sets current day and time in the header
 function renderClock(){
     $("#currentDay").text(moment().format("[Today is: ] dddd, MMMM Do YYYY, h:mm a"));
@@ -24,17 +24,13 @@ if('geolocation' in navigator) {
 function currentLocation(){
         //gets current location coordinates
         navigator.geolocation.getCurrentPosition(function(position){
-            //console.log(position);
             var lat = position.coords.latitude;
             var long = position.coords.longitude;
-            //console.log(lat);
-            //console.log(long);
             // finds city with coordinates and displays on website
-            //var location = document.getElementById('city');
             var geoAPIURL = 'https://api.openweathermap.org/geo/1.0/reverse?lat=' + lat + '&lon=' + long + '&limit=1&appid=43cd2ebe15da8dcbd0ac1ecba5178ffc';
             fetch(geoAPIURL)
               .then( Response => Response.json())
-              .then( data => $(location).text(data[0].name + ', ' + data[0].state))
+              .then( data => $(city).text(data[0].name + ', ' + data[0].state))
               
             //gets weather for current location
             function currentWeather(lat, long){
@@ -43,12 +39,6 @@ function currentLocation(){
                 fetch(apiURL)
                     .then( res => res.json())
                     .then( function(data){
-                      //console.log(data);
-                      /*var temp = document.getElementById('temp');
-                      var wind = document.getElementById('wind');
-                      var humidity = document.getElementById('humidity');
-                      var uv = document.getElementById('uv');
-                      var icon = document.getElementById('currentDayIcon'); */
                       var uvValue = data.current.uvi;
                       //displays weather conditions on screen
                       $(icon).attr("src", 'https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '@2x.png');
