@@ -149,16 +149,17 @@ $(searchBtn).on('click', function(event){
 //save to local storage
 
 //var history = [];
-var pullhistory = JSON.parse(localStorage.getItem('weatherHistory'));
+//var pullhistory = JSON.parse(localStorage.getItem('weatherHistory'));
 console.log(pullhistory);
 $(searchBtn).on('click', function(){
-
+  var pullhistory = JSON.parse(localStorage.getItem('weatherHistory'));
   if( pullhistory === null){
     var history = [];
     history[0] = $('#inputCity').val().trim();
     localStorage.setItem('weatherHistory', JSON.stringify(history));
   } else {
-    console.log('foo');
+    history[0] = $('#inputCity').val().trim();
+    
   }
 });
 
